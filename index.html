@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" data-i18n="meta.description"
+        content="Chychkan — a family-run mountain retreat in the Chychkan Gorge, Talas Province, Kyrgyzstan. Pure alpine air, the river, fresh trout, and quiet. Reserve your room." />
+  <meta name="theme-color" content="#1f3d2f" />
+
+  <title data-i18n="meta.title">Chychkan · Mountain Retreat in the Chychkan Gorge</title>
+
+  <!-- Fonts are self-hosted (no third-party request) — defined in css/styles.css.
+       Preload the body font so first paint swaps fast on the common case. -->
+  <link rel="preload" href="assets/fonts/inter-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Mark that JS is on, before first paint, so scroll-reveal can hide
+       elements safely. With JS off, nothing is hidden — content still shows. -->
+  <script>document.documentElement.className += " js";</script>
+</head>
+<body>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Chychkan home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+            <path d="M2 26 L11 10 L16 18 L21 8 L30 26 Z" fill="currentColor"/>
+            <path d="M11 10 L13.5 14 L9 14 Z" fill="#f7f3ea"/>
+            <path d="M21 8 L24 13 L18.5 13 Z" fill="#f7f3ea"/>
+          </svg>
+        </span>
+        <span class="brand-text">Chychkan</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#rooms" data-i18n="nav.rooms">Rooms</a>
+        <a href="#experiences" data-i18n="nav.experiences">Experiences</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language switcher -->
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-set-lang="en" class="lang-btn">EN</button>
+          <button type="button" data-set-lang="ru" class="lang-btn">РУ</button>
+          <button type="button" data-set-lang="ky" class="lang-btn">КЫ</button>
+        </div>
+        <a href="#reserve" class="btn btn-primary btn-sm" data-i18n="nav.reserve">Reserve</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <!-- Layered SVG mountain scene = premium placeholder. Swap for a real photo:
+           set .hero { background-image: url('assets/hero.jpg'); } and remove the SVG. -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-glow"></div>
+        <svg class="hero-scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#cfe0e8"/>
+              <stop offset="0.55" stop-color="#e9e2d2"/>
+              <stop offset="1" stop-color="#f4ecda"/>
+            </linearGradient>
+            <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7d96a3"/><stop offset="1" stop-color="#9fb1ba"/>
+            </linearGradient>
+            <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3f5d4d"/><stop offset="1" stop-color="#557060"/>
+            </linearGradient>
+            <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1f3d2f"/><stop offset="1" stop-color="#2c4d3b"/>
+            </linearGradient>
+          </defs>
+          <rect width="1440" height="800" fill="url(#sky)"/>
+          <circle cx="1120" cy="180" r="70" fill="#f6efdc" opacity="0.85"/>
+          <!-- far range -->
+          <path d="M0 430 L180 300 L300 380 L470 250 L620 360 L780 270 L960 380 L1130 280 L1290 370 L1440 300 L1440 800 L0 800 Z" fill="url(#far)" opacity="0.85"/>
+          <path d="M470 250 L505 300 L435 300 Z" fill="#eef1f0" opacity="0.9"/>
+          <path d="M780 270 L812 318 L748 318 Z" fill="#eef1f0" opacity="0.9"/>
+          <!-- mid range -->
+          <path d="M0 560 L160 430 L320 520 L520 380 L700 500 L880 400 L1080 520 L1260 430 L1440 510 L1440 800 L0 800 Z" fill="url(#mid)"/>
+          <!-- near range + gorge -->
+          <path d="M0 720 L220 560 L420 660 L600 540 L760 640 L760 800 L0 800 Z" fill="url(#near)"/>
+          <path d="M1440 720 L1220 560 L1020 660 L860 560 L760 640 L760 800 L1440 800 Z" fill="url(#near)"/>
+          <!-- river -->
+          <path d="M760 640 L700 800 L820 800 Z" fill="#a9c4cf" opacity="0.9"/>
+          <!-- snow leopard (ак илбирс) on a far ridge — a small, quiet detail -->
+          <g transform="translate(1214,382) scale(0.5)" fill="#16271e" opacity="0.92">
+            <path d="M6,52 C2,50 0,53 3,55 C6,57 9,55 11,53 C9,49 13,42 16,40 C16,34 19,30 22,33 L24,28 L27,34 C29,31 32,32 33,36 C40,34 50,34 60,36 C84,35 104,35 120,38 C128,34 134,33 140,37 C150,42 156,56 158,72 C159,78 163,80 167,77 C164,74 165,68 162,62 C158,52 152,44 142,42 C145,52 145,60 142,66 L140,96 L132,96 L134,66 C120,68 104,68 92,66 L92,96 L84,96 L86,64 C72,62 60,60 52,58 C50,70 48,80 48,96 L40,96 L42,58 C36,56 30,54 24,54 C18,56 12,56 6,52 Z"/>
+          </g>
+        </svg>
+        <div class="hero-mist"></div>
+        <div class="hero-fade"></div>
+        <div class="hero-grain"></div>
+      </div>
+
+      <div class="container hero-content">
+        <p class="hero-kicker" data-i18n="hero.kicker">Chychkan Gorge · Talas, Kyrgyzstan</p>
+        <h1 class="hero-title" data-i18n="hero.title">Where the mountains breathe</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          A family-run retreat beside the river, deep in the spruce forests of the Chychkan Gorge.
+        </p>
+        <div class="hero-cta">
+          <a href="#reserve" class="btn btn-primary btn-lg" data-i18n="hero.ctaReserve">Reserve a room</a>
+          <a href="#about" class="btn btn-ghost btn-lg" data-i18n="hero.ctaExplore">Explore</a>
+        </div>
+
+        <ul class="hero-stats" aria-label="Highlights">
+          <li><span class="stat-value">1,800<span class="stat-unit">m</span></span><span class="stat-label" data-i18n="hero.stat1">Altitude</span></li>
+          <li><span class="stat-value">12°C</span><span class="stat-label" data-i18n="hero.stat2">Summer days</span></li>
+          <li><span class="stat-value">1998</span><span class="stat-label" data-i18n="hero.stat3">Family-run since</span></li>
+        </ul>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"></a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="kicker" data-i18n="about.kicker">Our story</p>
+          <h2 class="section-title" data-i18n="about.title">A quiet place that has been in our family for three generations</h2>
+          <p data-i18n="about.p1">Chychkan sits where the road meets the river, in a narrow green gorge of the Talas mountains. We grew up here. Today we welcome travellers the same way our grandparents did — with warm food, clean rooms, and the sound of the river through an open window.</p>
+          <p data-i18n="about.p2">There is no rush here. People come to walk, to fish, to sit by the fire, and to breathe air that is genuinely cold and clean. We keep things simple so you can rest.</p>
+        </div>
+        <ul class="about-features">
+          <li class="reveal">
+            <span class="feature-icon" aria-hidden="true">❄</span>
+            <h3 data-i18n="about.f1Title">Pure mountain air</h3>
+            <p data-i18n="about.f1Desc">Cool, clean alpine air at 1,800 metres — even in midsummer.</p>
+          </li>
+          <li class="reveal d1">
+            <span class="feature-icon" aria-hidden="true">🐟</span>
+            <h3 data-i18n="about.f2Title">Fresh trout & home cooking</h3>
+            <p data-i18n="about.f2Desc">Trout from the river and bread from our own kitchen, every day.</p>
+          </li>
+          <li class="reveal d2">
+            <span class="feature-icon" aria-hidden="true">🌲</span>
+            <h3 data-i18n="about.f3Title">Quiet & remote</h3>
+            <p data-i18n="about.f3Desc">No crowds, no noise — only spruce forest, water, and stars.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ROOMS ============ -->
+    <section class="section section-tint" id="rooms">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="rooms.kicker">Stay with us</p>
+          <h2 class="section-title" data-i18n="rooms.title">Rooms & cabins</h2>
+          <p class="section-lead" data-i18n="rooms.subtitle">Simple, warm, and clean. Every room looks out on the forest or the river.</p>
+        </div>
+        <div class="room-grid" id="roomGrid">
+          <!-- Room cards rendered by js/main.js from js/data.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESERVE ============ -->
+    <section class="section" id="reserve">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="reserve.kicker">Reservation</p>
+          <h2 class="section-title" data-i18n="reserve.title">Reserve your stay</h2>
+          <p class="section-lead" data-i18n="reserve.subtitle">It takes one minute. We will call you back to confirm — no payment online.</p>
+        </div>
+
+        <div class="reserve-card reveal">
+          <!-- Step indicator -->
+          <ol class="steps" id="steps">
+            <li class="step is-active" data-step="1"><span class="step-num">1</span><span class="step-name" data-i18n="reserve.stepDates">Dates</span></li>
+            <li class="step" data-step="2"><span class="step-num">2</span><span class="step-name" data-i18n="reserve.stepRoom">Room</span></li>
+            <li class="step" data-step="3"><span class="step-num">3</span><span class="step-name" data-i18n="reserve.stepDetails">Details</span></li>
+            <li class="step" data-step="4"><span class="step-num">✓</span><span class="step-name" data-i18n="reserve.stepDone">Done</span></li>
+          </ol>
+
+          <!-- STEP 1 — Dates & guests -->
+          <div class="step-panel is-active" data-panel="1">
+            <h3 class="panel-title" data-i18n="reserve.s1Title">When are you coming?</h3>
+            <div class="field-row">
+              <label class="field">
+                <span class="field-label" data-i18n="reserve.checkIn">Check-in</span>
+                <input type="date" id="checkIn" class="input input-date" />
+              </label>
+              <label class="field">
+                <span class="field-label" data-i18n="reserve.checkOut">Check-out</span>
+                <input type="date" id="checkOut" class="input input-date" />
+              </label>
+            </div>
+            <div class="field">
+              <span class="field-label" data-i18n="reserve.guests">Guests</span>
+              <div class="stepper" role="group" aria-label="Guests">
+                <button type="button" class="stepper-btn" id="guestMinus" aria-label="Fewer guests">−</button>
+                <output class="stepper-value" id="guestValue">2</output>
+                <button type="button" class="stepper-btn" id="guestPlus" aria-label="More guests">+</button>
+              </div>
+            </div>
+            <p class="form-error" id="step1Error" role="alert" hidden></p>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="checkAvailBtn" data-i18n="reserve.checkBtn">Find available rooms</button>
+          </div>
+
+          <!-- STEP 2 — Choose room -->
+          <div class="step-panel" data-panel="2">
+            <h3 class="panel-title" data-i18n="reserve.s2Title">Choose your room</h3>
+            <p class="panel-meta" id="searchSummary"></p>
+            <div class="avail-list" id="availList"><!-- rendered by JS --></div>
+            <p class="form-error" id="noRooms" role="alert" hidden data-i18n="reserve.noRooms">
+              Sorry, no rooms are free for those dates. Please try different dates or call us.
+            </p>
+            <button type="button" class="btn btn-ghost btn-back" data-back-to="1" data-i18n="reserve.back">← Back</button>
+          </div>
+
+          <!-- STEP 3 — Guest details -->
+          <div class="step-panel" data-panel="3">
+            <h3 class="panel-title" data-i18n="reserve.s3Title">Your details</h3>
+            <div class="chosen-room" id="chosenRoom"></div>
+            <div class="field">
+              <span class="field-label" data-i18n="reserve.name">Full name</span>
+              <input type="text" id="guestName" class="input" autocomplete="name" />
+            </div>
+            <div class="field">
+              <span class="field-label" data-i18n="reserve.phone">Phone number</span>
+              <input type="tel" id="guestPhone" class="input" autocomplete="tel" inputmode="tel" placeholder="+996 ..." />
+            </div>
+            <div class="field">
+              <span class="field-label">
+                <span data-i18n="reserve.email">Email</span>
+                <span class="field-optional" data-i18n="reserve.optional">(optional)</span>
+              </span>
+              <input type="email" id="guestEmail" class="input" autocomplete="email" />
+            </div>
+            <div class="field">
+              <span class="field-label">
+                <span data-i18n="reserve.notes">Anything we should know?</span>
+                <span class="field-optional" data-i18n="reserve.optional">(optional)</span>
+              </span>
+              <textarea id="guestNotes" class="input" rows="3" data-i18n-ph="reserve.notesPh" placeholder="Arrival time, children, dietary needs..."></textarea>
+            </div>
+            <p class="form-error" id="step3Error" role="alert" hidden></p>
+            <div class="panel-actions">
+              <button type="button" class="btn btn-ghost btn-back" data-back-to="2" data-i18n="reserve.back">← Back</button>
+              <button type="button" class="btn btn-primary btn-lg" id="confirmBtn" data-i18n="reserve.confirmBtn">Confirm reservation</button>
+            </div>
+          </div>
+
+          <!-- STEP 4 — Confirmation -->
+          <div class="step-panel step-done" data-panel="4">
+            <div class="done-check" aria-hidden="true">✓</div>
+            <h3 class="panel-title" data-i18n="reserve.s4Title">Reservation received!</h3>
+            <p class="done-msg" data-i18n="reserve.s4Msg">Thank you. We will call you shortly to confirm your stay.</p>
+            <div class="done-summary" id="doneSummary"></div>
+            <p class="done-ref"><span data-i18n="reserve.reference">Reference</span>: <strong id="doneRef">—</strong></p>
+            <button type="button" class="btn btn-ghost btn-lg" id="anotherBtn" data-i18n="reserve.another">Make another reservation</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCES ============ -->
+    <section class="section section-tint" id="experiences">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="exp.kicker">Things to do</p>
+          <h2 class="section-title" data-i18n="exp.title">Days worth slowing down for</h2>
+        </div>
+        <div class="exp-grid">
+          <article class="exp-card reveal"><span class="exp-emoji">🥾</span><h3 data-i18n="exp.e1Title">Mountain hikes</h3><p data-i18n="exp.e1Desc">Trails along the gorge, from gentle riverside walks to alpine ridges.</p></article>
+          <article class="exp-card reveal"><span class="exp-emoji">🎣</span><h3 data-i18n="exp.e2Title">Trout fishing</h3><p data-i18n="exp.e2Desc">Fish the cold river and we will cook your catch for dinner.</p></article>
+          <article class="exp-card reveal"><span class="exp-emoji">🔥</span><h3 data-i18n="exp.e3Title">Evening campfire</h3><p data-i18n="exp.e3Desc">Tea, stories and a sky full of stars once the sun drops behind the ridge.</p></article>
+          <article class="exp-card reveal"><span class="exp-emoji">🐎</span><h3 data-i18n="exp.e4Title">Horseback riding</h3><p data-i18n="exp.e4Desc">Ride into the high pastures with a local guide who knows every path.</p></article>
+          <article class="exp-card reveal"><span class="exp-emoji">🌿</span><h3 data-i18n="exp.e5Title">Banya & rest</h3><p data-i18n="exp.e5Desc">A wood-fired banya by the water — the best way to end a cold day.</p></article>
+          <article class="exp-card reveal"><span class="exp-emoji">🍯</span><h3 data-i18n="exp.e6Title">Local food</h3><p data-i18n="exp.e6Desc">Honey, fresh bread, beshbarmak and tea — all made here, all home-grown.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="gallery.kicker">A look around</p>
+          <h2 class="section-title" data-i18n="gallery.title">The gorge, in pictures</h2>
+          <p class="section-lead" data-i18n="gallery.subtitle">Replace these with your own photos — the layout adapts automatically.</p>
+        </div>
+        <!-- Drop real photos into assets/ and set each tile's background-image. -->
+        <div class="gallery-grid">
+          <div class="gallery-tile reveal g1"><span class="gallery-hint" data-i18n="gallery.hint">Your photo</span></div>
+          <div class="gallery-tile reveal g2"></div>
+          <div class="gallery-tile reveal g3"></div>
+          <div class="gallery-tile reveal g4"></div>
+          <div class="gallery-tile reveal g5"></div>
+          <div class="gallery-tile reveal g6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section-dark" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="kicker kicker-light" data-i18n="contact.kicker">Find us</p>
+          <h2 class="section-title" data-i18n="contact.title">Come and stay</h2>
+          <p class="section-lead" data-i18n="contact.lead">The easiest way to reach us is by phone or WhatsApp. We answer in Kyrgyz, Russian and English.</p>
+          <ul class="contact-list">
+            <li><span class="contact-label" data-i18n="contact.address">Address</span><span data-i18n="contact.addressValue">Chychkan Gorge, Talas Province, Kyrgyzstan</span></li>
+            <li><span class="contact-label" data-i18n="contact.phone">Phone</span><a href="tel:+996700000000">+996 700 000 000</a></li>
+            <li><span class="contact-label" data-i18n="contact.email">Email</span><a href="mailto:hello@chychkan.kg">hello@chychkan.kg</a></li>
+            <li><span class="contact-label" data-i18n="contact.hours">Open</span><span data-i18n="contact.hoursValue">All year · reception 8:00–22:00</span></li>
+          </ul>
+          <div class="contact-actions">
+            <a href="https://wa.me/996700000000" class="btn btn-primary btn-lg" data-i18n="contact.whatsapp">Message on WhatsApp</a>
+            <a href="#reserve" class="btn btn-ghost btn-ghost-light btn-lg" data-i18n="contact.reserve">Reserve a room</a>
+          </div>
+        </div>
+        <div class="contact-map reveal d2">
+          <!-- Swap for a real embed: paste an <iframe> from Google Maps / 2GIS here. -->
+          <div class="map-placeholder" aria-hidden="true">
+            <span>🗺️</span>
+            <span data-i18n="contact.mapHint">Map embed goes here</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand-footer">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24" fill="none"><path d="M2 26 L11 10 L16 18 L21 8 L30 26 Z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-text">Chychkan</span>
+      </div>
+      <p class="footer-tagline" data-i18n="footer.tagline">A family-run mountain retreat in the Chychkan Gorge.</p>
+      <p class="footer-rights"><span data-i18n="footer.rights">© 2026 Chychkan. Made with care.</span></p>
+    </div>
+  </footer>
+
+  <!-- Mobile floating reserve button -->
+  <a href="#reserve" class="fab-reserve" data-i18n="nav.reserve">Reserve</a>
+
+  <!-- Scripts: data first (rooms + availability), then translations, then app logic. -->
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

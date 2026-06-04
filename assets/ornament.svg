@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 28" fill="none">
+  <!-- Kochkor-müyüz (ram's horn) flourish — a Kyrgyz felt-ornament motif -->
+  <g stroke="#c8893f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left horn -->
+    <path d="M78 14 C66 4 46 4 40 14 C36 21 26 21 24 13 C23 8 30 6 33 11 C34 13.5 31 15 29.5 13"/>
+    <!-- right horn (mirror) -->
+    <path d="M82 14 C94 4 114 4 120 14 C124 21 134 21 136 13 C137 8 130 6 127 11 C126 13.5 129 15 130.5 13"/>
+  </g>
+  <!-- centre diamond -->
+  <path d="M80 7 L86 14 L80 21 L74 14 Z" fill="#c8893f"/>
+</svg>
