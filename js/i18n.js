@@ -17,7 +17,7 @@ const I18N = {
     "nav.gallery": "Gallery", "nav.contact": "Contact", "nav.reserve": "Reserve",
 
     "hero.kicker": "Chychkan Gorge · Talas, Kyrgyzstan",
-    "hero.title": "Where the mountains breathe",
+    "hero.title": "A quiet place in the mountains",
     "hero.subtitle": "A family-run retreat beside the river, deep in the spruce forests of the Chychkan Gorge.",
     "hero.ctaReserve": "Reserve a room", "hero.ctaExplore": "Explore",
     "hero.stat1": "Altitude", "hero.stat2": "Summer days", "hero.stat3": "Family-run since",
@@ -93,7 +93,7 @@ const I18N = {
     "nav.gallery": "Галерея", "nav.contact": "Контакты", "nav.reserve": "Бронировать",
 
     "hero.kicker": "Чычканское ущелье · Талас, Кыргызстан",
-    "hero.title": "Там, где дышат горы",
+    "hero.title": "Тихое место в горах",
     "hero.subtitle": "Семейный отдых у реки, в глубине еловых лесов Чычканского ущелья.",
     "hero.ctaReserve": "Забронировать номер", "hero.ctaExplore": "Подробнее",
     "hero.stat1": "Высота", "hero.stat2": "Летом днём", "hero.stat3": "Семейное дело с",
@@ -169,7 +169,7 @@ const I18N = {
     "nav.gallery": "Галерея", "nav.contact": "Байланыш", "nav.reserve": "Ээлеп коюу",
 
     "hero.kicker": "Чычкан капчыгайы · Талас, Кыргызстан",
-    "hero.title": "Тоолор дем алган жер",
+    "hero.title": "Тоодогу тынч жер",
     "hero.subtitle": "Чычкан капчыгайынын карагай токойлорунун арасында, дарыя жээгиндеги үй-бүлөлүк эс алуу жайы.",
     "hero.ctaReserve": "Бөлмө ээлөө", "hero.ctaExplore": "Толугураак",
     "hero.stat1": "Бийиктик", "hero.stat2": "Жайкы күндүз", "hero.stat3": "Үй-бүлөлүк иш",
