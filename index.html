@@ -65,37 +65,48 @@
         <svg class="hero-scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice">
           <defs>
             <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#cfe0e8"/>
-              <stop offset="0.55" stop-color="#e9e2d2"/>
-              <stop offset="1" stop-color="#f4ecda"/>
+              <stop offset="0" stop-color="#b9ccd4"/>
+              <stop offset="0.45" stop-color="#dfd8c8"/>
+              <stop offset="0.78" stop-color="#f0e6d2"/>
+              <stop offset="1" stop-color="#f6ecd9"/>
             </linearGradient>
-            <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#7d96a3"/><stop offset="1" stop-color="#9fb1ba"/>
-            </linearGradient>
-            <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#3f5d4d"/><stop offset="1" stop-color="#557060"/>
-            </linearGradient>
-            <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#1f3d2f"/><stop offset="1" stop-color="#2c4d3b"/>
-            </linearGradient>
+            <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#fbf1d8"/>
+              <stop offset="0.5" stop-color="#f7e8cb" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#f7e8cb" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="r1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7d0cb"/><stop offset="1" stop-color="#d6dcd3"/></linearGradient>
+            <linearGradient id="r2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a6b6ab"/><stop offset="1" stop-color="#b3c0b4"/></linearGradient>
+            <linearGradient id="r3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#76927b"/><stop offset="1" stop-color="#849c86"/></linearGradient>
+            <linearGradient id="r4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46654f"/><stop offset="1" stop-color="#557061"/></linearGradient>
+            <linearGradient id="r5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#243f30"/><stop offset="1" stop-color="#2f5040"/></linearGradient>
+            <filter id="soft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="20"/></filter>
           </defs>
+
           <rect width="1440" height="800" fill="url(#sky)"/>
-          <circle cx="1120" cy="180" r="70" fill="#f6efdc" opacity="0.85"/>
-          <!-- far range -->
-          <path d="M0 430 L180 300 L300 380 L470 250 L620 360 L780 270 L960 380 L1130 280 L1290 370 L1440 300 L1440 800 L0 800 Z" fill="url(#far)" opacity="0.85"/>
-          <path d="M470 250 L505 300 L435 300 Z" fill="#eef1f0" opacity="0.9"/>
-          <path d="M780 270 L812 318 L748 318 Z" fill="#eef1f0" opacity="0.9"/>
+          <circle cx="1130" cy="200" r="230" fill="url(#sun)"/>
+          <circle cx="1130" cy="200" r="58" fill="#fbf2dd"/>
+
+          <!-- far range (hazy, fades into the sky for depth) -->
+          <path d="M0,360 L200,300 L380,350 L560,288 L760,345 L980,298 L1180,342 L1440,308 L1440,800 L0,800 Z" fill="url(#r1)"/>
+          <path d="M560,288 L592,330 L528,330 Z" fill="#f1f2ec"/>
+          <path d="M980,298 L1010,338 L950,338 Z" fill="#f1f2ec"/>
+          <rect x="-40" y="352" width="1520" height="44" fill="#f2e8d6" opacity="0.55" filter="url(#soft)"/>
+
+          <!-- second range -->
+          <path d="M0,442 L240,372 L460,432 L680,380 L900,436 L1140,386 L1440,432 L1440,800 L0,800 Z" fill="url(#r2)"/>
+          <rect x="-40" y="430" width="1520" height="40" fill="#eee3cf" opacity="0.45" filter="url(#soft)"/>
+
           <!-- mid range -->
-          <path d="M0 560 L160 430 L320 520 L520 380 L700 500 L880 400 L1080 520 L1260 430 L1440 510 L1440 800 L0 800 Z" fill="url(#mid)"/>
-          <!-- near range + gorge -->
-          <path d="M0 720 L220 560 L420 660 L600 540 L760 640 L760 800 L0 800 Z" fill="url(#near)"/>
-          <path d="M1440 720 L1220 560 L1020 660 L860 560 L760 640 L760 800 L1440 800 Z" fill="url(#near)"/>
-          <!-- river -->
-          <path d="M760 640 L700 800 L820 800 Z" fill="#a9c4cf" opacity="0.9"/>
-          <!-- snow leopard (ак илбирс) on a far ridge — a small, quiet detail -->
-          <g transform="translate(1214,382) scale(0.5)" fill="#16271e" opacity="0.92">
-            <path d="M6,52 C2,50 0,53 3,55 C6,57 9,55 11,53 C9,49 13,42 16,40 C16,34 19,30 22,33 L24,28 L27,34 C29,31 32,32 33,36 C40,34 50,34 60,36 C84,35 104,35 120,38 C128,34 134,33 140,37 C150,42 156,56 158,72 C159,78 163,80 167,77 C164,74 165,68 162,62 C158,52 152,44 142,42 C145,52 145,60 142,66 L140,96 L132,96 L134,66 C120,68 104,68 92,66 L92,96 L84,96 L86,64 C72,62 60,60 52,58 C50,70 48,80 48,96 L40,96 L42,58 C36,56 30,54 24,54 C18,56 12,56 6,52 Z"/>
-          </g>
+          <path d="M0,540 L180,470 L420,532 L640,476 L880,536 L1120,482 L1340,536 L1440,520 L1440,800 L0,800 Z" fill="url(#r3)"/>
+          <!-- fourth range -->
+          <path d="M0,642 L260,560 L500,632 L740,566 L1000,636 L1260,576 L1440,632 L1440,800 L0,800 Z" fill="url(#r4)"/>
+          <rect x="-40" y="612" width="1520" height="40" fill="#dfeae0" opacity="0.30" filter="url(#soft)"/>
+
+          <!-- near foreground + gorge -->
+          <path d="M0,770 L240,650 L520,752 L740,662 L1040,756 L1320,668 L1440,724 L1440,800 L0,800 Z" fill="url(#r5)"/>
+          <!-- soft river winding down the gorge -->
+          <path d="M716,686 C720,720 702,756 694,800 L786,800 C778,756 760,720 764,686 C748,694 730,694 716,686 Z" fill="#cfe0e6" opacity="0.7"/>
         </svg>
         <div class="hero-mist"></div>
         <div class="hero-fade"></div>
